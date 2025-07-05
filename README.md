@@ -1,1 +1,125 @@
 # ReshaCash
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ReSha Cash</title>
+  <style>
+    body {
+      font-family: 'Tahoma', sans-serif;
+      background: #f2f2f2;
+      margin: 0;
+      padding: 0;
+      direction: rtl;
+    }
+
+    header {
+      background: #2e2e2e;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header img {
+      height: 60px;
+      border-radius: 10px;
+      vertical-align: middle;
+      margin-left: 10px;
+    }
+
+    header h1 {
+      display: inline-block;
+      vertical-align: middle;
+      margin: 0;
+      font-size: 28px;
+    }
+
+    section {
+      padding: 20px;
+      max-width: 700px;
+      margin: auto;
+      background: white;
+      margin-top: 20px;
+      border-radius: 10px;
+    }
+
+    h2 {
+      color: #333;
+    }
+
+    .wallet-card {
+      background: #f9f9f9;
+      border: 1px solid #ccc;
+      padding: 15px;
+      border-radius: 10px;
+      margin-bottom: 15px;
+      text-align: center;
+      cursor: pointer;
+    }
+
+    .wallet-card:hover {
+      border-color: #4CAF50;
+    }
+
+    .wallet-card h3 {
+      margin: 10px 0 5px;
+    }
+
+    .wallet-card p {
+      font-size: 18px;
+      font-weight: bold;
+      color: #444;
+      direction: ltr;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="IMG_20250703_163047_469.jpg" alt="ReSha Cash Logo">
+    <h1>ReSha Cash</h1>
+    <p>متاح 24 ساعة لخدمتكم</p>
+  </header>
+
+  <section>
+    <h2>طرق الدفع (أرقام المحافظ)</h2>
+
+    <div class="wallet-card" onclick="copyToClipboard('01124725116')">
+      <h3>فودافون كاش</h3>
+      <p>01124725116</p>
+    </div>
+
+    <div class="wallet-card" onclick="copyToClipboard('01124725116')">
+      <h3>اتصالات كاش</h3>
+      <p>01124725116</p>
+    </div>
+
+    <p style="text-align: center; font-size: 14px; color: #666;">
+      اضغط على أي بطاقة لنسخ الرقم.
+    </p>
+  </section>
+
+  <footer>
+    جميع الحقوق محفوظة &copy; 2025 ReSha Cash
+  </footer>
+
+  <script>
+    function copyToClipboard(text) {
+      navigator.clipboard.writeText(text).then(() => {
+        alert("تم نسخ الرقم: " + text);
+      }).catch(() => {
+        alert("حدث خطأ أثناء النسخ.");
+      });
+    }
+  </script>
+
+</body>
+</html>
